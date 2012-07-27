@@ -26,18 +26,10 @@ Ext.define('Ext.ux.touch.grid.feature.Summary', {
 	},
 	
 	applySummaryRow: function(newRow, oldRow){
-		//console.log('new:');
-		//console.log(newRow);
-		//console.log('old:');
-		//console.log(oldRow);
 		return Ext.factory(newRow, Ext.Component, oldRow);
 	},
 	
 	updateSummaryRow: function(newRow, oldRow){
-		//console.log('new:');
-		//console.log(newRow);
-		//console.log('old:');
-		//console.log(oldRow);	
 		var me = this,
 			grid = me.getGrid();
 		if(oldRow){
@@ -106,7 +98,6 @@ Ext.define('Ext.ux.touch.grid.feature.Summary', {
 		}
 		
 		tpl = tpl.join('');
-		//console.log(tpl);
 		summaryRow = this.getSummaryRow();
 		summaryRow.setHtml(tpl);
 		
@@ -146,19 +137,14 @@ Ext.define('Ext.ux.touch.grid.feature.Summary', {
         if (type) {
             switch (type) {
                 case 'count':
-					//console.log('count:'+store.getCount());
                     return store.getCount();
                 case 'min':
-					//console.log('min:'+store.min(field));
                     return store.min(field);
                 case 'max':
-					//console.log('max:'+store.max(field));
                     return store.max(field);
                 case 'sum':
-					//console.log('sum:'+store.sum(field));
                     return store.sum(field);
                 case 'average':
-					//console.log('average:'+store.average(field));
                     return store.average(field);
                 default:
                     return '';                    
